@@ -12,6 +12,17 @@ const promptBox = document.getElementById("prompt");
 const messages = document.querySelector(".messages");
 const sendBtn = document.querySelector(".send-btn");
 
+promptBox.addEventListener("focus", () => {
+  document.addEventListener("keydown", (e) => {
+    if (promptBox.value.trim() !== "") {
+      if (e.key === "Enter" && !event.shiftKey) {
+        e.preventDefault();
+        sendBtn.click();
+      }
+    }
+  });
+});
+
 sendBtn.addEventListener("click", () => {
   prompts.push(promptBox.value);
 
@@ -76,8 +87,6 @@ function messageTreatment(message) {
 function createResponse(index) {
   const length = Math.floor(Math.random() * 100);
   let iaMessage = "";
-  console.log(index);
-  console.log(length);
 
   for (let i = 0; i < length; i++) {
     let knowledgeThemeIndex = index;

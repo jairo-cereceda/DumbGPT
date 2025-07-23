@@ -29,11 +29,13 @@ body{
     outline: none;
     height: 70%;
     color: white;
+    resize: none;
 }
 
 .prompt-wrapper{
     width: 80%;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
     min-height: 80px;
     border-radius: 20px;
     background-color: rgb(61, 58, 58);
@@ -41,14 +43,11 @@ body{
 }
 
 .send-btn{
-    position: absolute;
-    right: 20px;
-    top: 30%;
     background-color: cadetblue;
     padding: 10px;
     font-weight: 700;
     border: none;
-    border-radius: 20px;
+    border-radius: 0 20px 20px 0;
     cursor: pointer;
     transition: 0.2s ease all;
     color: white;
