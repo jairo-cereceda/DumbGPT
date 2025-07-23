@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(40, 39, 39);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.messages{
+    margin: 30px;
+    background-color: rgb(61, 58, 58);
+    border-radius: 30px;
+    height: 75vh;
+    overflow-y: auto;
+}
+
+.user-box{
+    display: flex;
+    justify-content: center;
+}
+
+.prompt-box{
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    margin: 15px;
+    outline: none;
+    height: 70%;
+    color: white;
+}
+
+.prompt-wrapper{
+    width: 80%;
+    position: relative;
+    min-height: 80px;
+    border-radius: 20px;
+    background-color: rgb(61, 58, 58);
+    
+}
+
+.send-btn{
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    background-color: cadetblue;
+    padding: 10px;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s ease all;
+    color: white;
+}
+
+.send-btn:hover{
+    background-color: rgb(110, 179, 181);
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+}
+
+.user-message{
+    align-self: end;
+    padding: 10px;
+    background-color: rgb(40, 39, 39);
+    border-radius: 10px;
+    color: white;
+    max-width: 70%;
+    position: relative;
+}
+
+.user-message::after{
+    content: "";
+  position: absolute;
+  right: -10px;
+  top: 25%;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid rgb(40, 39, 39);
+}
+
+.ia-message{
+    align-self: start;
+    padding: 10px;
+    background-color: rgb(40, 39, 39);
+    border-radius: 10px;
+    color: white;
+    max-width: 70%;
+    transition: 0.3s ease all;
+    position: relative;
+}
+
+.ia-message::after{
+    content: "";
+  position: absolute;
+  left: -10px;
+  top: 25%;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid rgb(40, 39, 39);
+}
