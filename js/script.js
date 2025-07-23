@@ -2,7 +2,7 @@ let prompts = [];
 let answers = [];
 let knowledge = [];
 
-fetch("../bd/data.json")
+fetch("js/bd/data.json")
   .then((response) => response.json())
   .then((data) => {
     knowledge = data;
